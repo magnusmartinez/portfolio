@@ -346,78 +346,121 @@
         <p class="section-label">Experiencia</p>
         <h2 class="section-title">Trayectoria profesional</h2>
       </div>
+
       <div class="timeline">
+
+        <!-- PODER JURIDICO -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-header">
               <div>
-                <h3 class="timeline-title">Senior Backend Engineer</h3>
-                <p class="timeline-company">TechSolutions SaaS</p>
+                <h3 class="timeline-title">Backend Engineer / Lead Developer</h3>
+                <p class="timeline-company">Poder Jurídico Nacional</p>
               </div>
-              <span class="timeline-date">2022 - Presente</span>
+              <span class="timeline-date">Ago 2024 - Presente</span>
             </div>
+
             <p class="timeline-description">
-              Liderazgo técnico del equipo backend. Diseño de arquitectura multi-tenant para plataforma
-              SaaS con +500 clientes activos. Implementación de sistemas de facturación, reportería
-              y procesamiento de transacciones de alto volumen.
+              Desarrollo completo de plataforma SaaS para gestión jurídica, incluyendo diseño de arquitectura,
+              implementación de APIs REST, integración de pagos y despliegue en producción. Responsable del sistema
+              end-to-end, garantizando consistencia, seguridad y mantenibilidad.
             </p>
+
             <div class="timeline-highlights">
               <span class="timeline-tag">Django</span>
               <span class="timeline-tag">PostgreSQL</span>
-              <span class="timeline-tag">Redis</span>
+              <span class="timeline-tag">Stripe</span>
               <span class="timeline-tag">AWS</span>
               <span class="timeline-tag">Arquitectura</span>
             </div>
           </div>
         </div>
 
+        <!-- MYASESOR -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-header">
               <div>
                 <h3 class="timeline-title">Backend Engineer</h3>
-                <p class="timeline-company">FinanceApp Corp</p>
+                <p class="timeline-company">MyAsesor Colombia S.A.S</p>
               </div>
-              <span class="timeline-date">2020 - 2022</span>
+              <span class="timeline-date">Feb 2021 - Nov 2021</span>
             </div>
+
             <p class="timeline-description">
-              Desarrollo de APIs REST para aplicación financiera. Implementación de sistema de
-              auditoría y trazabilidad. Optimización de queries que redujo tiempos de respuesta
-              en un 60%.
+              Desarrollo del sistema principal de la empresa, incluyendo migración de código legacy desde Java/Spring
+              Boot
+              hacia Python/Django. Implementación de arquitectura modular basada en servicios, optimización de base de
+              datos
+              y diseño de APIs internas para soportar lógica de negocio compleja.
             </p>
+
             <div class="timeline-highlights">
               <span class="timeline-tag">Python</span>
-              <span class="timeline-tag">Django REST</span>
-              <span class="timeline-tag">MySQL</span>
-              <span class="timeline-tag">Celery</span>
+              <span class="timeline-tag">Django</span>
+              <span class="timeline-tag">PostgreSQL</span>
+              <span class="timeline-tag">Microservicios</span>
+              <span class="timeline-tag">GitFlow</span>
             </div>
           </div>
         </div>
 
+        <!-- IGD -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-header">
               <div>
-                <h3 class="timeline-title">Python Developer</h3>
-                <p class="timeline-company">StartupDev</p>
+                <h3 class="timeline-title">Backend Developer</h3>
+                <p class="timeline-company">IGD S.A.S (SmartCredit / Biometric)</p>
               </div>
-              <span class="timeline-date">2018 - 2020</span>
+              <span class="timeline-date">Nov 2023 - Apr 2024</span>
             </div>
+
             <p class="timeline-description">
-              Desarrollo full-stack con énfasis en backend. Construcción de MVPs para startups,
-              integraciones con APIs de terceros y sistemas de automatización.
+              Desarrollo de funcionalidades backend para plataformas fintech, implementando lógica de negocio,
+              endpoints API y mejoras en el rendimiento del sistema. Participación en proyectos orientados a manejo
+              de datos sensibles y validaciones críticas.
             </p>
+
             <div class="timeline-highlights">
               <span class="timeline-tag">Python</span>
               <span class="timeline-tag">Django</span>
-              <span class="timeline-tag">PostgreSQL</span>
-              <span class="timeline-tag">Docker</span>
+              <span class="timeline-tag">APIs REST</span>
+              <span class="timeline-tag">Fintech</span>
             </div>
           </div>
         </div>
+
+        <!-- SOPORTE IT -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Asistente de Sistemas / IT Support</h3>
+                <p class="timeline-company">Catalonia Complejo Bávaro</p>
+              </div>
+              <span class="timeline-date">Apr 2025 - Jul 2025</span>
+            </div>
+
+            <p class="timeline-description">
+              Soporte técnico a usuarios, gestión de infraestructura y administración de redes en entorno empresarial.
+              Resolución de incidencias de hardware/software, gestión de usuarios en Active Directory y soporte a
+              sistemas críticos de operación hotelera.
+            </p>
+
+            <div class="timeline-highlights">
+              <span class="timeline-tag">Linux</span>
+              <span class="timeline-tag">Redes</span>
+              <span class="timeline-tag">Active Directory</span>
+              <span class="timeline-tag">Soporte IT</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -530,6 +573,14 @@
     </div>
   </div>
 
+  <script src="constants.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function() {
+    emailjs.init("PUBLIC_API_KEY");
+  })();
+</script>
   <script src="index.js"></script>
 </body>
 

@@ -151,8 +151,22 @@ document.addEventListener('keydown', (e) => {
 
 // Contact form
 const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
+
+contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    alert('Mensaje enviado. Te contactaré pronto.');
-    contactForm.reset();
+
+    const formData = {
+        name: contactForm.name.value,
+        email: contactForm.email.value,
+        message: contactForm.message.value
+    };
+
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, formData)
+        .then(function(response) {
+            alert('Mensaje enviado correctamente');
+            contactForm.reset();
+        }, function(error) {
+            alert('Error al enviar el mensaje');
+            console.log(error);
+        });
 });
