@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elías Martínez | Backend Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">magnus<span>.com</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#skills">Stack</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#experience">Experiencia</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMobileMenu()">Sobre mí</a>
+    <a href="#skills" onclick="closeMobileMenu()">Stack</a>
+    <a href="#projects" onclick="closeMobileMenu()">Proyectos</a>
+    <a href="#experience" onclick="closeMobileMenu()">Experiencia</a>
+    <a href="#contact" onclick="closeMobileMenu()">Contacto</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Disponible para proyectos
+        </div>
+        <h1 class="hero-name">Elías Martínez</h1>
+        <p class="hero-title">Backend Engineer | Transactional Systems & SaaS</p>
+        <p class="hero-subtitle">Especializado en el diseño de sistemas transaccionales, APIs robustas y plataformas
+          SaaS orientadas a operaciones de alto volumen.</p>
+        <p class="hero-description">Diseño y construyo sistemas backend orientados a operaciones críticas, donde la
+          consistencia de datos, la trazabilidad y el rendimiento son fundamentales. Me enfoco en arquitecturas que
+          soportan lógica de negocio compleja, procesamiento concurrente y escenarios reales de producción.</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            Ver proyectos
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7V17" />
+            </svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary">Contactar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Sobre mí</p>
+        <h2 class="section-title">Ingeniero Backend con enfoque en sistemas de producción</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Soy backend engineer especializado en el diseño de sistemas transaccionales y plataformas SaaS que requieren
+            alta consistencia, control financiero y trazabilidad completa.
+          </p>
+
+          <p>
+            He construido arquitecturas capaces de soportar operaciones concurrentes, flujos complejos de negocio y
+            procesamiento en tiempo real. Mi enfoque está en garantizar integridad de datos mediante patrones como
+            idempotencia, control de concurrencia y auditoría estructurada.
+          </p>
+
+          <p>
+            No construyo prototipos visuales; construyo el núcleo que hace funcionar sistemas reales en producción. Cada
+            decisión técnica está orientada a confiabilidad, rendimiento y mantenibilidad a largo plazo.
+          </p>
+
+        </div>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <div class="highlight-content">
+              <h4>Integridad Transaccional</h4>
+              <p>Control de operaciones críticas con idempotencia, validaciones consistentes y manejo seguro de estados
+                en flujos de negocio complejos.</p>
+            </div>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
+            </div>
+            <div class="highlight-content">
+              <h4>Rendimiento en Alto Volumen</h4>
+              <p>Optimización de consultas, uso de índices y caching estratégico para soportar operaciones concurrentes
+                y cargas intensivas en producción.</p>
+            </div>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+              </svg>
+            </div>
+            <div class="highlight-content">
+              <h4>Trazabilidad y Auditoría</h4>
+              <p>Registro completo de operaciones con historial, auditoría y seguimiento de cambios para garantizar
+                transparencia y control.</p>
+            </div>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                <line x1="3" y1="9" x2="21" y2="9" />
+                <line x1="9" y1="21" x2="9" y2="9" />
+              </svg>
+            </div>
+            <div class="highlight-content">
+              <h4>Arquitectura SaaS Multi-tenant</h4>
+              <p>Diseño de sistemas escalables con aislamiento de datos por cliente y soporte para múltiples entornos
+                dentro de una misma plataforma.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <!-- <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Stack Técnico</p>
+        <h2 class="section-title">Tecnologías y herramientas</h2>
+        <p class="section-subtitle">
+          Stack probado en producción, orientado a construir sistemas backend sólidos y mantenibles.
+        </p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3 class="skill-category-title">Backend</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-dot"></span>Python</div>
+            <div class="skill-item"><span class="skill-dot"></span>Django</div>
+            <div class="skill-item"><span class="skill-dot"></span>Django REST Framework</div>
+            <div class="skill-item"><span class="skill-dot"></span>Celery</div>
+            <div class="skill-item"><span class="skill-dot"></span>FastAPI</div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-category-title">Bases de Datos</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-dot"></span>PostgreSQL</div>
+            <div class="skill-item"><span class="skill-dot"></span>MySQL</div>
+            <div class="skill-item"><span class="skill-dot"></span>Redis</div>
+            <div class="skill-item"><span class="skill-dot"></span>SQLite</div>
+            <div class="skill-item"><span class="skill-dot"></span>MongoDB</div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-category-title">Infraestructura</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-dot"></span>Docker</div>
+            <div class="skill-item"><span class="skill-dot"></span>Linux</div>
+            <div class="skill-item"><span class="skill-dot"></span>Git</div>
+            <div class="skill-item"><span class="skill-dot"></span>Nginx</div>
+            <div class="skill-item"><span class="skill-dot"></span>AWS</div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-category-title">Arquitectura</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-dot"></span>APIs REST</div>
+            <div class="skill-item"><span class="skill-dot"></span>Idempotencia</div>
+            <div class="skill-item"><span class="skill-dot"></span>Concurrencia</div>
+            <div class="skill-item"><span class="skill-dot"></span>Multi-tenant</div>
+            <div class="skill-item"><span class="skill-dot"></span>Auditoría</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Stack Técnico</p>
+        <h2 class="section-title">Tecnologías y sistemas en producción</h2>
+        <p class="section-subtitle">
+          Stack orientado a construir sistemas backend transaccionales, APIs robustas y plataformas SaaS con alto
+          volumen de operaciones.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Backend -->
+        <div class="skill-category">
+          <h3 class="skill-category-title">Backend & APIs</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-dot"></span>Python (producción)</div>
+            <div class="skill-item"><span class="skill-dot"></span>Django & Django REST Framework</div>
+            <div class="skill-item"><span class="skill-dot"></span>Diseño de APIs REST robustas</div>
+            <div class="skill-item"><span class="skill-dot"></span>Servicios backend desacoplados</div>
+          </div>
+        </div>
+
+        <!-- Bases de Datos -->
+        <div class="skill-category">
+          <h3 class="skill-category-title">Bases de Datos</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-dot"></span>PostgreSQL (modelado y optimización)</div>
+            <div class="skill-item"><span class="skill-dot"></span>Diseño de esquemas transaccionales</div>
+            <div class="skill-item"><span class="skill-dot"></span>Optimización de queries e índices</div>
+            <div class="skill-item"><span class="skill-dot"></span>Redis (cache y control de concurrencia)</div>
+            <div class="skill-item"><span class="skill-dot"></span>Manejo de consistencia de datos</div>
+          </div>
+        </div>
+
+        <!-- Infraestructura -->
+        <div class="skill-category">
+          <h3 class="skill-category-title">Infraestructura & DevOps</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-dot"></span>Linux (entornos productivos)</div>
+            <div class="skill-item"><span class="skill-dot"></span>Nginx (serving y reverse proxy)</div>
+            <div class="skill-item"><span class="skill-dot"></span>Despliegue en AWS (Lightsail)</div>
+            <div class="skill-item"><span class="skill-dot"></span>Control de versiones con Git</div>
+          </div>
+        </div>
+
+        <!-- Arquitectura -->
+        <div class="skill-category">
+          <h3 class="skill-category-title">Arquitectura & Sistemas</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-dot"></span>Sistemas transaccionales</div>
+            <div class="skill-item"><span class="skill-dot"></span>Idempotencia en operaciones críticas</div>
+            <div class="skill-item"><span class="skill-dot"></span>Manejo de concurrencia</div>
+            <div class="skill-item"><span class="skill-dot"></span>Arquitectura multi-tenant SaaS</div>
+            <div class="skill-item"><span class="skill-dot"></span>Auditoría y trazabilidad de datos</div>
+            <div class="skill-item"><span class="skill-dot"></span>Integración de APIs externas</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Proyectos</p>
+        <h2 class="section-title">Sistemas construidos para producción</h2>
+        <p class="section-subtitle">
+          Cada proyecto representa problemas reales resueltos mediante sistemas robustos, arquitectura escalable y
+          decisiones técnicas orientadas a producción.
+        </p>
+      </div>
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="professional">Profesional</button>
+        <button class="filter-btn" data-filter="personal">Personal</button>
+      </div>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card" data-type="personal">
+          <div class="project-header">
+            <div class="project-meta">
+              <span class="project-type professional">Profesional</span>
+            </div>
+
+            <h3 class="project-title">Transactional SaaS Platform for Lottery Operations with Risk Engine</h3>
+
+            <p class="project-problem">
+              Plataforma SaaS multi-tenant para la gestión de bancas de lotería en República Dominicana,
+              diseñada para manejar operaciones transaccionales en tiempo real, incluyendo ventas, control
+              de caja, turnos de cajeros y un motor de riesgo que valida la exposición financiera antes de
+              cada operación.
+            </p>
+          </div>
+
+          <div class="project-stack">
+            <span class="stack-tag">Django</span>
+            <span class="stack-tag">PostgreSQL</span>
+            <span class="stack-tag">Redis</span>
+            <span class="stack-tag">Idempotency</span>
+            <span class="stack-tag">Concurrency Control</span>
+          </div>
+
+          <div class="project-footer">
+            <span class="project-role"><strong>Rol:</strong> Backend Engineer (Core System Design)</span>
+
+            <a href="#" class="project-link" onclick="openProjectModal('lottery')">
+              Ver detalle
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Experiencia</p>
+        <h2 class="section-title">Trayectoria profesional</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Senior Backend Engineer</h3>
+                <p class="timeline-company">TechSolutions SaaS</p>
+              </div>
+              <span class="timeline-date">2022 - Presente</span>
+            </div>
+            <p class="timeline-description">
+              Liderazgo técnico del equipo backend. Diseño de arquitectura multi-tenant para plataforma
+              SaaS con +500 clientes activos. Implementación de sistemas de facturación, reportería
+              y procesamiento de transacciones de alto volumen.
+            </p>
+            <div class="timeline-highlights">
+              <span class="timeline-tag">Django</span>
+              <span class="timeline-tag">PostgreSQL</span>
+              <span class="timeline-tag">Redis</span>
+              <span class="timeline-tag">AWS</span>
+              <span class="timeline-tag">Arquitectura</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Backend Engineer</h3>
+                <p class="timeline-company">FinanceApp Corp</p>
+              </div>
+              <span class="timeline-date">2020 - 2022</span>
+            </div>
+            <p class="timeline-description">
+              Desarrollo de APIs REST para aplicación financiera. Implementación de sistema de
+              auditoría y trazabilidad. Optimización de queries que redujo tiempos de respuesta
+              en un 60%.
+            </p>
+            <div class="timeline-highlights">
+              <span class="timeline-tag">Python</span>
+              <span class="timeline-tag">Django REST</span>
+              <span class="timeline-tag">MySQL</span>
+              <span class="timeline-tag">Celery</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Python Developer</h3>
+                <p class="timeline-company">StartupDev</p>
+              </div>
+              <span class="timeline-date">2018 - 2020</span>
+            </div>
+            <p class="timeline-description">
+              Desarrollo full-stack con énfasis en backend. Construcción de MVPs para startups,
+              integraciones con APIs de terceros y sistemas de automatización.
+            </p>
+            <div class="timeline-highlights">
+              <span class="timeline-tag">Python</span>
+              <span class="timeline-tag">Django</span>
+              <span class="timeline-tag">PostgreSQL</span>
+              <span class="timeline-tag">Docker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Contacto</p>
+        <h2 class="section-title">Trabajemos juntos</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Disponible para nuevos proyectos</h3>
+          <p>
+            Si necesitas construir o escalar un sistema backend crítico — ya sea un SaaS, una plataforma transaccional o
+            un sistema con lógica compleja — puedo ayudarte a diseñarlo y llevarlo a producción con confiabilidad.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:magnusmartinez@outlook.com" class="contact-link">
+              <span class="contact-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </span>
+              magnusmartinez@outlook.com
+            </a>
+            <a href="https://www.linkedin.com/in/elias-martinez-dev/" target="_blank" class="contact-link">
+              <span class="contact-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </span>
+              LinkedIn
+            </a>
+            <!-- <a href="https://github.com" target="_blank" class="contact-link">
+              <span class="contact-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                </svg>
+              </span>
+              GitHub
+            </a> -->
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label class="form-label" for="name">Nombre</label>
+            <input type="text" id="name" class="form-input" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input type="email" id="email" class="form-input" placeholder="tu@email.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Mensaje</label>
+            <textarea id="message" class="form-textarea" placeholder="Cuéntame sobre tu proyecto..."
+              required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            Enviar mensaje
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-text">2024 Elías Martínez. Construido con codigo limpio.</p>
+        <div class="footer-links">
+          <a href="https://github.com" target="_blank">GitHub</a>
+          <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+          <a href="mailto:magnusmartinez@outlook.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Modal -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <h2 class="modal-title" id="modalTitle">Título del Proyecto</h2>
+          <p class="modal-subtitle" id="modalSubtitle">Tipo de proyecto</p>
+        </div>
+        <button class="modal-close" onclick="closeProjectModal()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Content dynamically inserted -->
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
