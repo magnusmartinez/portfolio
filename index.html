@@ -4,11 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
   <title>Elías Martínez | Backend Engineer</title>
+  <meta name="description" content="Backend Engineer especializado en sistemas transaccionales, APIs robustas y plataformas SaaS. Experiencia en Django, PostgreSQL y arquitecturas de alto rendimiento para entornos de producción.">
+  <meta name="author" content="Elías Martínez">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (WhatsApp, LinkedIn, Facebook) -->
+  <meta property="og:title" content="Elías Martínez | Backend Engineer">
+  <meta property="og:description" content="Backend Engineer especializado en sistemas transaccionales, APIs robustas y plataformas SaaS.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://magnusmartinez.github.io/portfolio/">
+  <meta property="og:image" content="https://magnusmartinez.github.io/portfolio/assets/images/preview-self.png">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Elías Martínez | Backend Engineer">
+  <meta name="twitter:description" content="Backend Engineer especializado en sistemas transaccionales y plataformas SaaS.">
+  <meta name="twitter:image" content="https://magnusmartinez.github.io/portfolio/assets/images/preview-self.png">
+
+  <!-- Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="index.css">
+
+  <!-- Favicon  -->
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -314,6 +341,41 @@
             </a>
           </div>
         </div>
+        <div class="project-card" data-type="professional">
+          <div class="project-header">
+            <div class="project-meta">
+              <span class="project-type professional">Profesional</span>
+            </div>
+
+            <h3 class="project-title">QR-Based Cylinder Tracking Platform for Internal Logistics Control</h3>
+
+            <p class="project-problem">
+              Sistema desarrollado de extremo a extremo para la trazabilidad de cilindros de gas mediante QR,
+              permitiendo controlar todo el flujo operativo desde la recogida hasta la devolución final,
+              integrado con el ERP de la empresa y utilizado en entorno productivo.
+            </p>
+          </div>
+
+          <div class="project-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">Django</span>
+            <span class="stack-tag">DRF</span>
+            <span class="stack-tag">MySQL</span>
+            <span class="stack-tag">JavaScript</span>
+          </div>
+
+          <div class="project-footer">
+            <span class="project-role"><strong>Rol:</strong> Full-Stack Developer</span>
+
+            <a href="#" class="project-link" onclick="openProjectModal('qrcylinder')">
+              Ver detalle
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -332,7 +394,7 @@
 
       <div class="clients-grid">
 
-        <!-- CLIENT 1 -->
+
         <a href="https://poderjuridiconacional.com/" target="_blank" class="client-card">
           <div class="client-header">
             <div class="client-logo"><img src="assets/images/poderjuridiconacional.png"
@@ -344,7 +406,7 @@
           </p>
         </a>
 
-        <!-- CLIENT 2 -->
+
         <a href="https://myasesor.com/index.php" target="_blank" class="client-card">
           <div class="client-header">
             <div class="client-logo"><img src="assets/images/myasesor.png" alt="LOCO MyAsesor Colombia SAS"></div>
@@ -355,7 +417,7 @@
           </p>
         </a>
 
-        <!-- CLIENT 3 -->
+
         <a href="https://igdsas.com/" target="_blank" class="client-card">
           <div class="client-header">
             <div class="client-logo"><img src="assets/images/igd.png" alt="LOCO IGD"></div>
@@ -367,7 +429,7 @@
           </p>
         </a>
 
-        <!-- CLIENT 4 -->
+
         <a href="https://www.cataloniahotels.com/" target="_blank" class="client-card">
           <div class="client-header">
             <div class="client-logo"><img src="assets/images/catalonia.png" alt="LOCO Catalonia"></div>
@@ -375,6 +437,20 @@
           </div>
           <p class="client-description">
             Soporte e infraestructura IT en entorno empresarial, incluyendo redes, sistemas y gestión de usuarios.
+          </p>
+        </a>
+
+        <a href="https://www.gasco.com.co/" target="_blank" class="client-card">
+          <div class="client-header">
+            <div class="client-logo">
+              <img src="assets/images/gases-de-la-costa.png" alt="LOGO GASES DE LA COSTA">
+            </div>
+            <h3 class="client-name">Gases de la Costa S. A.</h3>
+          </div>
+
+          <p class="client-description">
+            Desarrollo end-to-end de plataforma interna para gestión logística de cilindros mediante QR,
+            permitiendo trazabilidad completa del proceso operativo e integración con ERP en entorno productivo.
           </p>
         </a>
 

@@ -61,6 +61,46 @@ const projectsData = {
             { value: 'Simulación', label: 'Herramientas financieras' },
             { value: 'Seguro', label: 'Procesamiento confiable' }
         ]
+    },
+
+    qrcylinder: {
+        title: 'QR-Based Cylinder Tracking Platform for Internal Logistics Control',
+        subtitle: 'Proyecto Profesional | Full-Stack Developer',
+
+        summary: 'Aplicación interna desarrollada de extremo a extremo para la gestión y trazabilidad de cilindros de gas mediante códigos QR en Gases de la Costa S. A. El sistema digitaliza completamente el flujo operativo, permitiendo registrar en tiempo real la recogida, traslado, llenado y devolución de cilindros, integrándose con el ERP de la empresa para mantener consistencia y control sobre la operación.',
+
+        architecture: [
+            'Diseño e implementación completa del sistema (backend, frontend y flujo operativo)',
+            'Backend con lógica de negocio para control de estados y trazabilidad de cilindros',
+            'APIs REST para registro de movimientos y sincronización con ERP',
+            'Frontend web optimizado para uso en campo con escaneo QR mediante cámara del dispositivo',
+            'Modelo de datos relacional para representar el ciclo completo de vida del cilindro',
+            'Despliegue y configuración del sistema en entorno productivo'
+        ],
+
+        challenges: [
+            'Diseñar desde cero un sistema que represente fielmente el flujo logístico real de la empresa',
+            'Implementar trazabilidad completa de cilindros a través de múltiples etapas operativas',
+            'Integrar el sistema con el ERP sin afectar la operación existente',
+            'Optimizar la experiencia de usuario para uso en campo con dispositivos móviles',
+            'Garantizar consistencia de datos en un entorno con múltiples puntos de registro'
+        ],
+
+        technologies: [
+            'Python',
+            'Django',
+            'Django REST Framework',
+            'MySQL',
+            'JavaScript',
+            'HTML',
+            'CSS'
+        ],
+
+        results: [
+            { value: 'End-to-End', label: 'Desarrollo completo' },
+            { value: 'QR', label: 'Trazabilidad total' },
+            { value: 'Producción', label: 'Sistema operativo real' }
+        ]
     }
 };
 
@@ -183,7 +223,7 @@ document.addEventListener('keydown', (e) => {
 // Contact form
 const contactForm = document.getElementById('contactForm');
 
-contactForm.addEventListener('submit', function(e) {
+contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
     const formData = {
@@ -193,10 +233,10 @@ contactForm.addEventListener('submit', function(e) {
     };
 
     emailjs.send(SERVICE_ID, TEMPLATE_ID, formData)
-        .then(function(response) {
+        .then(function (response) {
             alert('Mensaje enviado correctamente');
             contactForm.reset();
-        }, function(error) {
+        }, function (error) {
             alert('Error al enviar el mensaje');
             console.log(error);
         });
