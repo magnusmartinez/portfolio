@@ -15,7 +15,7 @@
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#" class="nav-logo">magnus<span>.com</span></a>
+      <a href="#" class="nav-logo">Elías <span>Martínez</span></a>
       <ul class="nav-links">
         <li><a href="#about">Sobre mí</a></li>
         <li><a href="#skills">Stack</a></li>
@@ -161,60 +161,6 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <!-- <section class="skills" id="skills">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">Stack Técnico</p>
-        <h2 class="section-title">Tecnologías y herramientas</h2>
-        <p class="section-subtitle">
-          Stack probado en producción, orientado a construir sistemas backend sólidos y mantenibles.
-        </p>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3 class="skill-category-title">Backend</h3>
-          <div class="skill-list">
-            <div class="skill-item"><span class="skill-dot"></span>Python</div>
-            <div class="skill-item"><span class="skill-dot"></span>Django</div>
-            <div class="skill-item"><span class="skill-dot"></span>Django REST Framework</div>
-            <div class="skill-item"><span class="skill-dot"></span>Celery</div>
-            <div class="skill-item"><span class="skill-dot"></span>FastAPI</div>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3 class="skill-category-title">Bases de Datos</h3>
-          <div class="skill-list">
-            <div class="skill-item"><span class="skill-dot"></span>PostgreSQL</div>
-            <div class="skill-item"><span class="skill-dot"></span>MySQL</div>
-            <div class="skill-item"><span class="skill-dot"></span>Redis</div>
-            <div class="skill-item"><span class="skill-dot"></span>SQLite</div>
-            <div class="skill-item"><span class="skill-dot"></span>MongoDB</div>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3 class="skill-category-title">Infraestructura</h3>
-          <div class="skill-list">
-            <div class="skill-item"><span class="skill-dot"></span>Docker</div>
-            <div class="skill-item"><span class="skill-dot"></span>Linux</div>
-            <div class="skill-item"><span class="skill-dot"></span>Git</div>
-            <div class="skill-item"><span class="skill-dot"></span>Nginx</div>
-            <div class="skill-item"><span class="skill-dot"></span>AWS</div>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3 class="skill-category-title">Arquitectura</h3>
-          <div class="skill-list">
-            <div class="skill-item"><span class="skill-dot"></span>APIs REST</div>
-            <div class="skill-item"><span class="skill-dot"></span>Idempotencia</div>
-            <div class="skill-item"><span class="skill-dot"></span>Concurrencia</div>
-            <div class="skill-item"><span class="skill-dot"></span>Multi-tenant</div>
-            <div class="skill-item"><span class="skill-dot"></span>Auditoría</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
 
   <!-- Skills Section -->
   <section class="skills" id="skills">
@@ -298,11 +244,11 @@
         <button class="filter-btn" data-filter="personal">Personal</button>
       </div>
       <div class="projects-grid">
-        <!-- Project 1 -->
+
         <div class="project-card" data-type="personal">
           <div class="project-header">
             <div class="project-meta">
-              <span class="project-type professional">Profesional</span>
+              <span class="project-type personal">Personal</span>
             </div>
 
             <h3 class="project-title">Transactional SaaS Platform for Lottery Operations with Risk Engine</h3>
@@ -334,6 +280,103 @@
             </a>
           </div>
         </div>
+        <div class="project-card" data-type="professional">
+          <div class="project-header">
+            <div class="project-meta">
+              <span class="project-type professional">Profesional</span>
+            </div>
+
+            <h3 class="project-title">Credit Management Platform for Simulations and Loan Control</h3>
+
+            <p class="project-problem">
+              Plataforma backend orientada a la gestión de créditos y simulaciones financieras, diseñada para
+              centralizar información, procesar solicitudes de préstamo y ejecutar cálculos financieros de forma
+              segura y consistente dentro de un entorno productivo.
+            </p>
+          </div>
+
+          <div class="project-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">Django</span>
+            <span class="stack-tag">MySQL</span>
+            <span class="stack-tag">APIs REST</span>
+            <span class="stack-tag">Business Logic</span>
+          </div>
+
+          <div class="project-footer">
+            <span class="project-role"><strong>Rol:</strong> Backend Developer</span>
+
+            <a href="#" class="project-link" onclick="openProjectModal('smartcredit')">
+              Ver detalle
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients Section -->
+  <section class="clients" id="clients">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Clientes</p>
+        <h2 class="section-title">Empresas y proyectos con los que he trabajado</h2>
+        <p class="section-subtitle">
+          Experiencia colaborando en el desarrollo de sistemas backend, plataformas SaaS y soluciones orientadas a
+          producción.
+        </p>
+      </div>
+
+      <div class="clients-grid">
+
+        <!-- CLIENT 1 -->
+        <a href="https://poderjuridiconacional.com/" target="_blank" class="client-card">
+          <div class="client-header">
+            <div class="client-logo"><img src="assets/images/poderjuridiconacional.png"
+                alt="LOCO PODER JURIDICO NACIONAL"></div>
+            <h3 class="client-name">Poder Jurídico Nacional</h3>
+          </div>
+          <p class="client-description">
+            Desarrollo completo de plataforma SaaS para gestión jurídica, incluyendo backend, arquitectura y despliegue.
+          </p>
+        </a>
+
+        <!-- CLIENT 2 -->
+        <a href="https://myasesor.com/index.php" target="_blank" class="client-card">
+          <div class="client-header">
+            <div class="client-logo"><img src="assets/images/myasesor.png" alt="LOCO MyAsesor Colombia SAS"></div>
+            <h3 class="client-name">MyAsesor Colombia S.A.S</h3>
+          </div>
+          <p class="client-description">
+            Desarrollo backend y migración de sistema legacy hacia arquitectura moderna basada en servicios.
+          </p>
+        </a>
+
+        <!-- CLIENT 3 -->
+        <a href="https://igdsas.com/" target="_blank" class="client-card">
+          <div class="client-header">
+            <div class="client-logo"><img src="assets/images/igd.png" alt="LOCO IGD"></div>
+            <h3 class="client-name">IGD S.A.S</h3>
+          </div>
+          <p class="client-description">
+            Desarrollo backend para plataformas fintech, incluyendo lógica de negocio y APIs para manejo de datos
+            sensibles.
+          </p>
+        </a>
+
+        <!-- CLIENT 4 -->
+        <a href="https://www.cataloniahotels.com/" target="_blank" class="client-card">
+          <div class="client-header">
+            <div class="client-logo"><img src="assets/images/catalonia.png" alt="LOCO Catalonia"></div>
+            <h3 class="client-name">Catalonia Complejo Bávaro</h3>
+          </div>
+          <p class="client-description">
+            Soporte e infraestructura IT en entorno empresarial, incluyendo redes, sistemas y gestión de usuarios.
+          </p>
+        </a>
 
       </div>
     </div>
@@ -530,22 +573,22 @@
   </section>
 
   <!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      
-      <p class="footer-text">
-        © 2026 Elías Martínez — Sistemas reales: consistencia, rendimiento y escalabilidad.
-      </p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
 
-      <div class="footer-links">
-        <a href="https://www.linkedin.com/in/elias-martinez-dev/" target="_blank">LinkedIn</a>
-        <a href="mailto:magnusmartinez@outlook.com">Email</a>
+        <p class="footer-text">
+          © 2026 Elías Martínez — Sistemas reales: consistencia, rendimiento y escalabilidad.
+        </p>
+
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/elias-martinez-dev/" target="_blank">LinkedIn</a>
+          <a href="mailto:magnusmartinez@outlook.com">Email</a>
+        </div>
+
       </div>
-
     </div>
-  </div>
-</footer>
+  </footer>
 
   <!-- Project Modal -->
   <div class="modal-overlay" id="projectModal">
@@ -572,11 +615,11 @@
   <script src="constants.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-<script>
-  (function() {
-    emailjs.init(PUBLIC_API_KEY);
-  })();
-</script>
+  <script>
+    (function () {
+      emailjs.init(PUBLIC_API_KEY);
+    })();
+  </script>
   <script src="index.js"></script>
 </body>
 

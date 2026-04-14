@@ -30,6 +30,37 @@ const projectsData = {
             { value: '100%', label: 'Trazabilidad de operaciones' },
             { value: '0', label: 'Duplicados en operaciones críticas' }
         ]
+    },
+
+    smartcredit: {
+        title: 'Credit Management Platform for Simulations and Loan Control',
+        subtitle: 'Proyecto Profesional | Backend Developer',
+
+        summary: 'Plataforma orientada a la gestión de créditos y simulaciones financieras, diseñada para facilitar el acceso a herramientas de análisis, cálculo y control de préstamos de forma eficiente y segura. El sistema permite centralizar información financiera, ejecutar simulaciones y mantener control operativo sobre procesos relacionados con crédito.',
+
+        architecture: [
+            'Backend orientado a lógica de negocio para gestión de créditos y simulaciones financieras',
+            'APIs para consulta, registro y procesamiento de información asociada a préstamos',
+            'Modelo de datos relacional para control de usuarios, solicitudes y operaciones financieras',
+            'Estructura modular para facilitar mantenimiento y evolución del sistema',
+            'Validaciones de negocio para garantizar consistencia en cálculos y flujos de crédito'
+        ],
+
+        challenges: [
+            'Implementación de lógica de negocio para simulaciones financieras de forma consistente',
+            'Diseño de endpoints backend para soportar operaciones relacionadas con créditos y préstamos',
+            'Manejo seguro de datos financieros y validaciones críticas dentro del flujo de negocio',
+            'Mantenimiento y mejora continua de funcionalidades existentes sin afectar estabilidad',
+            'Construcción de una base backend clara y mantenible para evolución futura del producto'
+        ],
+
+        technologies: ['Python', 'Django', 'PostgreSQL', 'APIs REST', 'JavaScript'],
+
+        results: [
+            { value: 'Crédito', label: 'Gestión centralizada' },
+            { value: 'Simulación', label: 'Herramientas financieras' },
+            { value: 'Seguro', label: 'Procesamiento confiable' }
+        ]
     }
 };
 
