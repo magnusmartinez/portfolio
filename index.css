@@ -992,6 +992,7 @@ section {
     border-bottom: 1px solid var(--border-soft);
     padding: 16px 24px;
     box-shadow: var(--shadow-lg);
+    z-index: 10;
 }
 
 .mobile-menu.active {
