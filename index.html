@@ -7,13 +7,13 @@
 
   <!-- SEO -->
   <title>Elías Martínez | Backend Engineer</title>
-  <meta name="description" content="Backend Engineer especializado en sistemas transaccionales, APIs robustas y plataformas SaaS. Experiencia en Django, PostgreSQL y arquitecturas de alto rendimiento para entornos de producción.">
+  <meta name="description" content="Backend Engineer especializado en sistemas transaccionales, APIs robustas, fintech integrations y plataformas SaaS en producción.">
   <meta name="author" content="Elías Martínez">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph (WhatsApp, LinkedIn, Facebook) -->
   <meta property="og:title" content="Elías Martínez | Backend Engineer">
-  <meta property="og:description" content="Backend Engineer especializado en sistemas transaccionales, APIs robustas y plataformas SaaS.">
+  <meta property="og:description" content="Backend Engineer especializado en sistemas transaccionales, fintech integrations y plataformas SaaS.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://magnusmartinez.github.io/portfolio/">
   <meta property="og:image" content="https://magnusmartinez.github.io/portfolio/assets/images/preview-self.png">
@@ -21,7 +21,7 @@
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Elías Martínez | Backend Engineer">
-  <meta name="twitter:description" content="Backend Engineer especializado en sistemas transaccionales y plataformas SaaS.">
+  <meta name="twitter:description" content="Backend Engineer especializado en sistemas transaccionales, fintech integrations y SaaS.">
   <meta name="twitter:image" content="https://magnusmartinez.github.io/portfolio/assets/images/preview-self.png">
 
   <!-- Performance -->
@@ -34,7 +34,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="index.css">
 
-  <!-- Favicon  -->
+  <!-- Favicon -->
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 
@@ -44,13 +44,18 @@
     <div class="nav-container">
       <a href="#" class="nav-logo">Elías <span>Martínez</span></a>
       <ul class="nav-links">
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#skills">Stack</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#experience">Experiencia</a></li>
-        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#about" data-i18n="nav.about">Sobre mí</a></li>
+        <li><a href="#focus" data-i18n="nav.focus">Enfoque</a></li>
+        <li><a href="#skills" data-i18n="nav.skills">Stack</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Proyectos</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Experiencia</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
       </ul>
-      <div class="nav-toggle" id="navToggle">
+      <div class="language-switch" aria-label="Language selector">
+        <button type="button" class="lang-btn active" data-lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <div class="nav-toggle" id="navToggle" aria-label="Open menu" role="button" tabindex="0">
         <span></span>
         <span></span>
         <span></span>
@@ -60,11 +65,16 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#about" onclick="closeMobileMenu()">Sobre mí</a>
-    <a href="#skills" onclick="closeMobileMenu()">Stack</a>
-    <a href="#projects" onclick="closeMobileMenu()">Proyectos</a>
-    <a href="#experience" onclick="closeMobileMenu()">Experiencia</a>
-    <a href="#contact" onclick="closeMobileMenu()">Contacto</a>
+    <a href="#about" onclick="closeMobileMenu()" data-i18n="nav.about">Sobre mí</a>
+    <a href="#focus" onclick="closeMobileMenu()" data-i18n="nav.focus">Enfoque</a>
+    <a href="#skills" onclick="closeMobileMenu()" data-i18n="nav.skills">Stack</a>
+    <a href="#projects" onclick="closeMobileMenu()" data-i18n="nav.projects">Proyectos</a>
+    <a href="#experience" onclick="closeMobileMenu()" data-i18n="nav.experience">Experiencia</a>
+    <a href="#contact" onclick="closeMobileMenu()" data-i18n="nav.contact">Contacto</a>
+    <div class="mobile-language-switch">
+      <button type="button" class="lang-btn active" data-lang="es">ES</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+    </div>
   </div>
 
   <!-- Hero Section -->
@@ -73,24 +83,59 @@
       <div class="hero-content">
         <div class="hero-badge">
           <span class="hero-badge-dot"></span>
-          Disponible para proyectos
+          <span data-i18n="hero.badge">Disponible para proyectos backend</span>
         </div>
         <h1 class="hero-name">Elías Martínez</h1>
-        <p class="hero-title">Backend Engineer | Transactional Systems & SaaS</p>
-        <p class="hero-subtitle">Especializado en el diseño de sistemas transaccionales, APIs robustas y plataformas
-          SaaS orientadas a operaciones de alto volumen.</p>
-        <p class="hero-description">Diseño y construyo sistemas backend orientados a operaciones críticas, donde la
-          consistencia de datos, la trazabilidad y el rendimiento son fundamentales. Me enfoco en arquitecturas que
-          soportan lógica de negocio compleja, procesamiento concurrente y escenarios reales de producción.</p>
+        <p class="hero-title" data-i18n="hero.title">Backend Engineer | Transactional Systems, Fintech & SaaS</p>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">Construyo sistemas backend críticos para operaciones financieras, firmas electrónicas, validación de identidad y plataformas SaaS en producción.</p>
+        <p class="hero-description" data-i18n="hero.description">Diseño arquitecturas donde la consistencia de datos, la trazabilidad, la seguridad y el rendimiento no son detalles secundarios: son el centro del sistema. Me enfoco en APIs robustas, lógica de negocio compleja, integraciones externas y flujos transaccionales confiables.</p>
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary">
-            Ver proyectos
+            <span data-i18n="hero.primaryCta">Ver proyectos</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M7 17L17 7M17 7H7M17 7V17" />
             </svg>
           </a>
-          <a href="#contact" class="btn btn-secondary">Contactar</a>
+          <a href="#contact" class="btn btn-secondary" data-i18n="hero.secondaryCta">Contactar</a>
+        </div>
+
+        <div class="hero-stats" aria-label="Professional highlights">
+          <div class="hero-stat">
+            <strong>3+</strong>
+            <span data-i18n="hero.stats.experience">años construyendo software</span>
+          </div>
+          <div class="hero-stat">
+            <strong>5+</strong>
+            <span data-i18n="hero.stats.production">sistemas en producción</span>
+          </div>
+          <div class="hero-stat">
+            <strong>10+</strong>
+            <span data-i18n="hero.stats.integrations">integraciones/API workflows</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Current Section -->
+  <section class="current" id="current">
+    <div class="container">
+      <div class="current-card">
+        <div>
+          <p class="section-label" data-i18n="current.label">Actualmente</p>
+          <h2 class="section-title" data-i18n="current.title">Diseñando backend para SaaS, fintech y operaciones críticas</h2>
+          <p class="section-subtitle" data-i18n="current.subtitle">Trabajo principalmente con Python, Django/DRF, Flask, PostgreSQL/MySQL, Redis, JWT, integraciones de terceros e infraestructura Linux para llevar sistemas reales a producción.</p>
+        </div>
+        <div class="current-tags">
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">Django</span>
+          <span class="stack-tag">Flask</span>
+          <span class="stack-tag">PostgreSQL</span>
+          <span class="stack-tag">MySQL</span>
+          <span class="stack-tag">Redis</span>
+          <span class="stack-tag">JWT</span>
+          <span class="stack-tag">AWS</span>
         </div>
       </div>
     </div>
@@ -100,61 +145,41 @@
   <section class="about" id="about">
     <div class="container">
       <div class="section-header">
-        <p class="section-label">Sobre mí</p>
-        <h2 class="section-title">Ingeniero Backend con enfoque en sistemas de producción</h2>
+        <p class="section-label" data-i18n="about.label">Sobre mí</p>
+        <h2 class="section-title" data-i18n="about.title">Ingeniero Backend con enfoque en sistemas de producción</h2>
       </div>
       <div class="about-grid">
         <div class="about-text">
-          <p>
-            Soy backend engineer especializado en el diseño de sistemas transaccionales y plataformas SaaS que requieren
-            alta consistencia, control financiero y trazabilidad completa.
-          </p>
-
-          <p>
-            He construido arquitecturas capaces de soportar operaciones concurrentes, flujos complejos de negocio y
-            procesamiento en tiempo real. Mi enfoque está en garantizar integridad de datos mediante patrones como
-            idempotencia, control de concurrencia y auditoría estructurada.
-          </p>
-
-          <p>
-            No construyo prototipos visuales; construyo el núcleo que hace funcionar sistemas reales en producción. Cada
-            decisión técnica está orientada a confiabilidad, rendimiento y mantenibilidad a largo plazo.
-          </p>
-
+          <p data-i18n="about.p1">Soy backend engineer especializado en el diseño de sistemas transaccionales, plataformas SaaS y flujos financieros donde la consistencia, la seguridad y la trazabilidad son críticas.</p>
+          <p data-i18n="about.p2">He construido arquitecturas capaces de soportar operaciones concurrentes, procesamiento en tiempo real, integraciones con proveedores externos, validación de identidad, firma electrónica y lógica de negocio compleja.</p>
+          <p data-i18n="about.p3">Mi enfoque no es sólo escribir endpoints: construyo el núcleo que permite que productos reales funcionen correctamente en producción, con decisiones orientadas a mantenibilidad, rendimiento y evolución a largo plazo.</p>
         </div>
         <div class="about-highlights">
           <div class="highlight-card">
             <div class="highlight-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
               </svg>
             </div>
             <div class="highlight-content">
-              <h4>Integridad Transaccional</h4>
-              <p>Control de operaciones críticas con idempotencia, validaciones consistentes y manejo seguro de estados
-                en flujos de negocio complejos.</p>
+              <h4 data-i18n="about.cards.integrity.title">Integridad Transaccional</h4>
+              <p data-i18n="about.cards.integrity.text">Operaciones críticas con idempotencia, validaciones de dominio y manejo seguro de estados.</p>
             </div>
           </div>
-
           <div class="highlight-card">
             <div class="highlight-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
               </svg>
             </div>
             <div class="highlight-content">
-              <h4>Rendimiento en Alto Volumen</h4>
-              <p>Optimización de consultas, uso de índices y caching estratégico para soportar operaciones concurrentes
-                y cargas intensivas en producción.</p>
+              <h4 data-i18n="about.cards.performance.title">Rendimiento en Alto Volumen</h4>
+              <p data-i18n="about.cards.performance.text">Optimización de consultas, índices, caching y control de concurrencia para cargas reales.</p>
             </div>
           </div>
-
           <div class="highlight-card">
             <div class="highlight-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                 <polyline points="14 2 14 8 20 8" />
                 <line x1="16" y1="13" x2="8" y2="13" />
@@ -162,25 +187,21 @@
               </svg>
             </div>
             <div class="highlight-content">
-              <h4>Trazabilidad y Auditoría</h4>
-              <p>Registro completo de operaciones con historial, auditoría y seguimiento de cambios para garantizar
-                transparencia y control.</p>
+              <h4 data-i18n="about.cards.audit.title">Trazabilidad y Auditoría</h4>
+              <p data-i18n="about.cards.audit.text">Registro completo de operaciones, historial de cambios, callbacks y seguimiento de estados.</p>
             </div>
           </div>
-
           <div class="highlight-card">
             <div class="highlight-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
                 <line x1="3" y1="9" x2="21" y2="9" />
                 <line x1="9" y1="21" x2="9" y2="9" />
               </svg>
             </div>
             <div class="highlight-content">
-              <h4>Arquitectura SaaS Multi-tenant</h4>
-              <p>Diseño de sistemas escalables con aislamiento de datos por cliente y soporte para múltiples entornos
-                dentro de una misma plataforma.</p>
+              <h4 data-i18n="about.cards.saas.title">Arquitectura SaaS Multi-tenant</h4>
+              <p data-i18n="about.cards.saas.text">Aislamiento por cliente, control operativo y diseño escalable para múltiples entornos.</p>
             </div>
           </div>
         </div>
@@ -188,68 +209,72 @@
     </div>
   </section>
 
+  <!-- Engineering Focus Section -->
+  <section class="focus" id="focus">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label" data-i18n="focus.label">Engineering Focus</p>
+        <h2 class="section-title" data-i18n="focus.title">Áreas donde aporto más valor</h2>
+        <p class="section-subtitle" data-i18n="focus.subtitle">Más que una lista de tecnologías, este es el tipo de problemas que diseño, estabilizo y llevo a producción.</p>
+      </div>
+      <div class="focus-grid">
+        <div class="focus-card"><span>01</span><h3 data-i18n="focus.items.transactional.title">Sistemas transaccionales</h3><p data-i18n="focus.items.transactional.text">Ventas, pagos, movimientos de caja, conciliación, control de estados e idempotencia.</p></div>
+        <div class="focus-card"><span>02</span><h3 data-i18n="focus.items.fintech.title">Flujos financieros y crédito</h3><p data-i18n="focus.items.fintech.text">Simulaciones, solicitudes, reglas de negocio, datos sensibles y validaciones críticas.</p></div>
+        <div class="focus-card"><span>03</span><h3 data-i18n="focus.items.identity.title">Identidad y firma digital</h3><p data-i18n="focus.items.identity.text">Onboarding, validación biométrica, firma electrónica, callbacks y proveedores externos.</p></div>
+        <div class="focus-card"><span>04</span><h3 data-i18n="focus.items.integration.title">Integración de sistemas</h3><p data-i18n="focus.items.integration.text">APIs externas, ERP, proveedores financieros, pasarelas de pago y servicios desacoplados.</p></div>
+      </div>
+    </div>
+  </section>
 
   <!-- Skills Section -->
   <section class="skills" id="skills">
     <div class="container">
       <div class="section-header">
-        <p class="section-label">Stack Técnico</p>
-        <h2 class="section-title">Tecnologías y sistemas en producción</h2>
-        <p class="section-subtitle">
-          Stack orientado a construir sistemas backend transaccionales, APIs robustas y plataformas SaaS con alto
-          volumen de operaciones.
-        </p>
+        <p class="section-label" data-i18n="skills.label">Stack Técnico</p>
+        <h2 class="section-title" data-i18n="skills.title">Tecnologías y prácticas en producción</h2>
+        <p class="section-subtitle" data-i18n="skills.subtitle">Stack orientado a construir sistemas backend transaccionales, APIs robustas y plataformas SaaS con alto volumen de operaciones.</p>
       </div>
-
       <div class="skills-grid">
-
-        <!-- Backend -->
         <div class="skill-category">
-          <h3 class="skill-category-title">Backend & APIs</h3>
+          <h3 class="skill-category-title" data-i18n="skills.backend.title">Backend & APIs</h3>
           <div class="skill-list">
-            <div class="skill-item"><span class="skill-dot"></span>Python (producción)</div>
+            <div class="skill-item"><span class="skill-dot"></span>Python</div>
             <div class="skill-item"><span class="skill-dot"></span>Django & Django REST Framework</div>
-            <div class="skill-item"><span class="skill-dot"></span>Diseño de APIs REST robustas</div>
-            <div class="skill-item"><span class="skill-dot"></span>Servicios backend desacoplados</div>
+            <div class="skill-item"><span class="skill-dot"></span>Flask</div>
+            <div class="skill-item"><span class="skill-dot"></span>REST APIs</div>
+            <div class="skill-item"><span class="skill-dot"></span>JWT / OAuth / Google Auth</div>
           </div>
         </div>
-
-        <!-- Bases de Datos -->
         <div class="skill-category">
-          <h3 class="skill-category-title">Bases de Datos</h3>
+          <h3 class="skill-category-title" data-i18n="skills.db.title">Bases de Datos</h3>
           <div class="skill-list">
-            <div class="skill-item"><span class="skill-dot"></span>PostgreSQL (modelado y optimización)</div>
-            <div class="skill-item"><span class="skill-dot"></span>Diseño de esquemas transaccionales</div>
-            <div class="skill-item"><span class="skill-dot"></span>Optimización de queries e índices</div>
-            <div class="skill-item"><span class="skill-dot"></span>Redis (cache y control de concurrencia)</div>
-            <div class="skill-item"><span class="skill-dot"></span>Manejo de consistencia de datos</div>
+            <div class="skill-item"><span class="skill-dot"></span>PostgreSQL</div>
+            <div class="skill-item"><span class="skill-dot"></span>MySQL</div>
+            <div class="skill-item"><span class="skill-dot"></span>Redis</div>
+            <div class="skill-item"><span class="skill-dot"></span>Indexes & Query Optimization</div>
+            <div class="skill-item"><span class="skill-dot"></span>Transactional Data Modeling</div>
           </div>
         </div>
-
-        <!-- Infraestructura -->
         <div class="skill-category">
-          <h3 class="skill-category-title">Infraestructura & DevOps</h3>
+          <h3 class="skill-category-title" data-i18n="skills.infra.title">Infraestructura & DevOps</h3>
           <div class="skill-list">
-            <div class="skill-item"><span class="skill-dot"></span>Linux (entornos productivos)</div>
-            <div class="skill-item"><span class="skill-dot"></span>Nginx (serving y reverse proxy)</div>
-            <div class="skill-item"><span class="skill-dot"></span>Despliegue en AWS (Lightsail)</div>
-            <div class="skill-item"><span class="skill-dot"></span>Control de versiones con Git</div>
+            <div class="skill-item"><span class="skill-dot"></span>Linux</div>
+            <div class="skill-item"><span class="skill-dot"></span>Nginx / Gunicorn / Supervisor</div>
+            <div class="skill-item"><span class="skill-dot"></span>AWS / Lightsail</div>
+            <div class="skill-item"><span class="skill-dot"></span>Docker</div>
+            <div class="skill-item"><span class="skill-dot"></span>Git / Deployment Workflows</div>
           </div>
         </div>
-
-        <!-- Arquitectura -->
         <div class="skill-category">
-          <h3 class="skill-category-title">Arquitectura & Sistemas</h3>
+          <h3 class="skill-category-title" data-i18n="skills.arch.title">Arquitectura & Sistemas</h3>
           <div class="skill-list">
-            <div class="skill-item"><span class="skill-dot"></span>Sistemas transaccionales</div>
-            <div class="skill-item"><span class="skill-dot"></span>Idempotencia en operaciones críticas</div>
-            <div class="skill-item"><span class="skill-dot"></span>Manejo de concurrencia</div>
-            <div class="skill-item"><span class="skill-dot"></span>Arquitectura multi-tenant SaaS</div>
-            <div class="skill-item"><span class="skill-dot"></span>Auditoría y trazabilidad de datos</div>
-            <div class="skill-item"><span class="skill-dot"></span>Integración de APIs externas</div>
+            <div class="skill-item"><span class="skill-dot"></span>Multi-tenant SaaS</div>
+            <div class="skill-item"><span class="skill-dot"></span>Idempotency</div>
+            <div class="skill-item"><span class="skill-dot"></span>Concurrency Control</div>
+            <div class="skill-item"><span class="skill-dot"></span>Audit Logging</div>
+            <div class="skill-item"><span class="skill-dot"></span>External API Integrations</div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -258,125 +283,16 @@
   <section class="projects" id="projects">
     <div class="container">
       <div class="section-header">
-        <p class="section-label">Proyectos</p>
-        <h2 class="section-title">Sistemas construidos para producción</h2>
-        <p class="section-subtitle">
-          Cada proyecto representa problemas reales resueltos mediante sistemas robustos, arquitectura escalable y
-          decisiones técnicas orientadas a producción.
-        </p>
+        <p class="section-label" data-i18n="projects.label">Proyectos</p>
+        <h2 class="section-title" data-i18n="projects.title">Sistemas construidos para producción</h2>
+        <p class="section-subtitle" data-i18n="projects.subtitle">Cada proyecto representa problemas reales resueltos mediante sistemas robustos, arquitectura escalable y decisiones técnicas orientadas a producción.</p>
       </div>
       <div class="projects-filter">
-        <button class="filter-btn active" data-filter="all">Todos</button>
-        <button class="filter-btn" data-filter="professional">Profesional</button>
-        <button class="filter-btn" data-filter="personal">Personal</button>
+        <button class="filter-btn active" data-filter="all" data-i18n="projects.filters.all">Todos</button>
+        <button class="filter-btn" data-filter="professional" data-i18n="projects.filters.professional">Profesional</button>
+        <button class="filter-btn" data-filter="personal" data-i18n="projects.filters.personal">Personal</button>
       </div>
-      <div class="projects-grid">
-
-        <div class="project-card" data-type="personal">
-          <div class="project-header">
-            <div class="project-meta">
-              <span class="project-type personal">Personal</span>
-            </div>
-
-            <h3 class="project-title">Transactional SaaS Platform for Lottery Operations with Risk Engine</h3>
-
-            <p class="project-problem">
-              Plataforma SaaS multi-tenant para la gestión de bancas de lotería en República Dominicana,
-              diseñada para manejar operaciones transaccionales en tiempo real, incluyendo ventas, control
-              de caja, turnos de cajeros y un motor de riesgo que valida la exposición financiera antes de
-              cada operación.
-            </p>
-          </div>
-
-          <div class="project-stack">
-            <span class="stack-tag">Django</span>
-            <span class="stack-tag">PostgreSQL</span>
-            <span class="stack-tag">Redis</span>
-            <span class="stack-tag">Idempotency</span>
-            <span class="stack-tag">Concurrency Control</span>
-          </div>
-
-          <div class="project-footer">
-            <span class="project-role"><strong>Rol:</strong> Backend Engineer (Core System Design)</span>
-
-            <a href="#" class="project-link" onclick="openProjectModal('lottery')">
-              Ver detalle
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-        </div>
-        <div class="project-card" data-type="professional">
-          <div class="project-header">
-            <div class="project-meta">
-              <span class="project-type professional">Profesional</span>
-            </div>
-
-            <h3 class="project-title">Credit Management Platform for Simulations and Loan Control</h3>
-
-            <p class="project-problem">
-              Plataforma backend orientada a la gestión de créditos y simulaciones financieras, diseñada para
-              centralizar información, procesar solicitudes de préstamo y ejecutar cálculos financieros de forma
-              segura y consistente dentro de un entorno productivo.
-            </p>
-          </div>
-
-          <div class="project-stack">
-            <span class="stack-tag">Python</span>
-            <span class="stack-tag">Django</span>
-            <span class="stack-tag">MySQL</span>
-            <span class="stack-tag">APIs REST</span>
-            <span class="stack-tag">Business Logic</span>
-          </div>
-
-          <div class="project-footer">
-            <span class="project-role"><strong>Rol:</strong> Backend Developer</span>
-
-            <a href="#" class="project-link" onclick="openProjectModal('smartcredit')">
-              Ver detalle
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-        </div>
-        <div class="project-card" data-type="professional">
-          <div class="project-header">
-            <div class="project-meta">
-              <span class="project-type professional">Profesional</span>
-            </div>
-
-            <h3 class="project-title">QR-Based Cylinder Tracking Platform for Internal Logistics Control</h3>
-
-            <p class="project-problem">
-              Sistema desarrollado de extremo a extremo para la trazabilidad de cilindros de gas mediante QR,
-              permitiendo controlar todo el flujo operativo desde la recogida hasta la devolución final,
-              integrado con el ERP de la empresa y utilizado en entorno productivo.
-            </p>
-          </div>
-
-          <div class="project-stack">
-            <span class="stack-tag">Python</span>
-            <span class="stack-tag">Django</span>
-            <span class="stack-tag">DRF</span>
-            <span class="stack-tag">MySQL</span>
-            <span class="stack-tag">JavaScript</span>
-          </div>
-
-          <div class="project-footer">
-            <span class="project-role"><strong>Rol:</strong> Full-Stack Developer</span>
-
-            <a href="#" class="project-link" onclick="openProjectModal('qrcylinder')">
-              Ver detalle
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-      </div>
+      <div class="projects-grid" id="projectsGrid"></div>
     </div>
   </section>
 
@@ -384,76 +300,31 @@
   <section class="clients" id="clients">
     <div class="container">
       <div class="section-header">
-        <p class="section-label">Clientes</p>
-        <h2 class="section-title">Empresas y proyectos con los que he trabajado</h2>
-        <p class="section-subtitle">
-          Experiencia colaborando en el desarrollo de sistemas backend, plataformas SaaS y soluciones orientadas a
-          producción.
-        </p>
+        <p class="section-label" data-i18n="clients.label">Clientes</p>
+        <h2 class="section-title" data-i18n="clients.title">Empresas y proyectos con los que he trabajado</h2>
+        <p class="section-subtitle" data-i18n="clients.subtitle">Experiencia colaborando en desarrollo backend, plataformas SaaS, sistemas financieros, logística interna e infraestructura de producción.</p>
       </div>
-
       <div class="clients-grid">
-
-
-        <a href="https://poderjuridiconacional.com/" target="_blank" class="client-card">
-          <div class="client-header">
-            <div class="client-logo"><img src="assets/images/poderjuridiconacional.png"
-                alt="LOCO PODER JURIDICO NACIONAL"></div>
-            <h3 class="client-name">Poder Jurídico Nacional</h3>
-          </div>
-          <p class="client-description">
-            Desarrollo completo de plataforma SaaS para gestión jurídica, incluyendo backend, arquitectura y despliegue.
-          </p>
+        <a href="https://poderjuridiconacional.com/" target="_blank" class="client-card" rel="noopener">
+          <div class="client-header"><div class="client-logo"><img src="assets/images/poderjuridiconacional.png" alt="Logo Poder Jurídico Nacional"></div><h3 class="client-name">Poder Jurídico Nacional</h3></div>
+          <p class="client-description" data-i18n="clients.poder">Desarrollo completo de plataforma SaaS para gestión jurídica, incluyendo backend, arquitectura, pagos y despliegue.</p>
         </a>
-
-
-        <a href="https://myasesor.com/index.php" target="_blank" class="client-card">
-          <div class="client-header">
-            <div class="client-logo"><img src="assets/images/myasesor.png" alt="LOCO MyAsesor Colombia SAS"></div>
-            <h3 class="client-name">MyAsesor Colombia S.A.S</h3>
-          </div>
-          <p class="client-description">
-            Desarrollo backend y migración de sistema legacy hacia arquitectura moderna basada en servicios.
-          </p>
+        <a href="https://myasesor.com/index.php" target="_blank" class="client-card" rel="noopener">
+          <div class="client-header"><div class="client-logo"><img src="assets/images/myasesor.png" alt="Logo MyAsesor Colombia SAS"></div><h3 class="client-name">MyAsesor Colombia S.A.S</h3></div>
+          <p class="client-description" data-i18n="clients.myasesor">Desarrollo backend y migración de sistema legacy hacia arquitectura moderna basada en servicios.</p>
         </a>
-
-
-        <a href="https://igdsas.com/" target="_blank" class="client-card">
-          <div class="client-header">
-            <div class="client-logo"><img src="assets/images/igd.png" alt="LOCO IGD"></div>
-            <h3 class="client-name">IGD S.A.S</h3>
-          </div>
-          <p class="client-description">
-            Desarrollo backend para plataformas fintech, incluyendo lógica de negocio y APIs para manejo de datos
-            sensibles.
-          </p>
+        <a href="https://igdsas.com/" target="_blank" class="client-card" rel="noopener">
+          <div class="client-header"><div class="client-logo"><img src="assets/images/igd.png" alt="Logo IGD"></div><h3 class="client-name">IGD S.A.S</h3></div>
+          <p class="client-description" data-i18n="clients.igd">Desarrollo backend para plataformas fintech, lógica de negocio, validación de identidad y flujos de firma.</p>
         </a>
-
-
-        <a href="https://www.cataloniahotels.com/" target="_blank" class="client-card">
-          <div class="client-header">
-            <div class="client-logo"><img src="assets/images/catalonia.png" alt="LOCO Catalonia"></div>
-            <h3 class="client-name">Catalonia Complejo Bávaro</h3>
-          </div>
-          <p class="client-description">
-            Soporte e infraestructura IT en entorno empresarial, incluyendo redes, sistemas y gestión de usuarios.
-          </p>
+        <a href="https://www.cataloniahotels.com/" target="_blank" class="client-card" rel="noopener">
+          <div class="client-header"><div class="client-logo"><img src="assets/images/catalonia.png" alt="Logo Catalonia"></div><h3 class="client-name">Catalonia Complejo Bávaro</h3></div>
+          <p class="client-description" data-i18n="clients.catalonia">Soporte e infraestructura IT en entorno empresarial, incluyendo redes, sistemas y gestión de usuarios.</p>
         </a>
-
-        <a href="https://www.gasco.com.co/" target="_blank" class="client-card">
-          <div class="client-header">
-            <div class="client-logo">
-              <img src="assets/images/gases-de-la-costa.png" alt="LOGO GASES DE LA COSTA">
-            </div>
-            <h3 class="client-name">Gases de la Costa S. A.</h3>
-          </div>
-
-          <p class="client-description">
-            Desarrollo end-to-end de plataforma interna para gestión logística de cilindros mediante QR,
-            permitiendo trazabilidad completa del proceso operativo e integración con ERP en entorno productivo.
-          </p>
+        <a href="https://www.gasco.com.co/" target="_blank" class="client-card" rel="noopener">
+          <div class="client-header"><div class="client-logo"><img src="assets/images/gases-de-la-costa.png" alt="Logo Gases de la Costa"></div><h3 class="client-name">Gases de la Costa S. A.</h3></div>
+          <p class="client-description" data-i18n="clients.gases">Desarrollo end-to-end de plataforma interna para trazabilidad logística de cilindros mediante QR e integración con ERP.</p>
         </a>
-
       </div>
     </div>
   </section>
@@ -462,124 +333,42 @@
   <section class="experience" id="experience">
     <div class="container">
       <div class="section-header">
-        <p class="section-label">Experiencia</p>
-        <h2 class="section-title">Trayectoria profesional</h2>
+        <p class="section-label" data-i18n="experience.label">Experiencia</p>
+        <h2 class="section-title" data-i18n="experience.title">Trayectoria profesional</h2>
       </div>
-
       <div class="timeline">
-
-        <!-- PODER JURIDICO -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <div class="timeline-header">
-              <div>
-                <h3 class="timeline-title">Backend Engineer / Lead Developer</h3>
-                <p class="timeline-company">Poder Jurídico Nacional</p>
-              </div>
-              <span class="timeline-date">Ago 2024 - Presente</span>
-            </div>
-
-            <p class="timeline-description">
-              Desarrollo completo de plataforma para gestión jurídica, incluyendo diseño de arquitectura,
-              implementación de APIs REST, integración de pagos y despliegue en producción. Responsable del sistema
-              end-to-end, garantizando consistencia, seguridad y mantenibilidad.
-            </p>
-
-            <div class="timeline-highlights">
-              <span class="timeline-tag">Django</span>
-              <span class="timeline-tag">PostgreSQL</span>
-              <span class="timeline-tag">Stripe</span>
-              <span class="timeline-tag">AWS</span>
-              <span class="timeline-tag">Arquitectura</span>
-            </div>
+            <div class="timeline-header"><div><h3 class="timeline-title" data-i18n="experience.poder.role">Backend Engineer / Lead Developer</h3><p class="timeline-company">Poder Jurídico Nacional</p></div><span class="timeline-date" data-i18n="experience.poder.date">Ago 2024 - Presente</span></div>
+            <p class="timeline-description" data-i18n="experience.poder.text">Desarrollo completo de plataforma SaaS para gestión jurídica, diseño de arquitectura, APIs REST, pagos, búsqueda de profesionales, autenticación y despliegue en producción.</p>
+            <div class="timeline-highlights"><span class="timeline-tag">Django</span><span class="timeline-tag">PostgreSQL</span><span class="timeline-tag">Stripe</span><span class="timeline-tag">AWS</span><span class="timeline-tag">Architecture</span></div>
           </div>
         </div>
-
-        <!-- MYASESOR -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <div class="timeline-header">
-              <div>
-                <h3 class="timeline-title">Backend Engineer</h3>
-                <p class="timeline-company">MyAsesor Colombia S.A.S</p>
-              </div>
-              <span class="timeline-date">Feb 2021 - Nov 2021</span>
-            </div>
-
-            <p class="timeline-description">
-              Desarrollo del sistema principal de la empresa, incluyendo migración de código legacy desde Java/Spring
-              Boot
-              hacia Python/Django. Implementación de arquitectura modular basada en servicios, optimización de base de
-              datos
-              y diseño de APIs internas para soportar lógica de negocio compleja.
-            </p>
-
-            <div class="timeline-highlights">
-              <span class="timeline-tag">Python</span>
-              <span class="timeline-tag">Django</span>
-              <span class="timeline-tag">PostgreSQL</span>
-              <span class="timeline-tag">Microservicios</span>
-              <span class="timeline-tag">GitFlow</span>
-            </div>
+            <div class="timeline-header"><div><h3 class="timeline-title" data-i18n="experience.catalonia.role">IT Systems Analyst</h3><p class="timeline-company">Catalonia Complejo Bávaro</p></div><span class="timeline-date" data-i18n="experience.catalonia.date">Abr 2025 - Jul 2025</span></div>
+            <p class="timeline-description" data-i18n="experience.catalonia.text">Soporte técnico e infraestructura en entorno hotelero empresarial: redes, usuarios, Active Directory, incidencias de sistemas críticos y soporte operativo.</p>
+            <div class="timeline-highlights"><span class="timeline-tag">Linux</span><span class="timeline-tag">Networks</span><span class="timeline-tag">Active Directory</span><span class="timeline-tag">IT Support</span></div>
           </div>
         </div>
-
-        <!-- IGD -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <div class="timeline-header">
-              <div>
-                <h3 class="timeline-title">Backend Developer</h3>
-                <p class="timeline-company">IGD S.A.S (SmartCredit / Biometric)</p>
-              </div>
-              <span class="timeline-date">Nov 2023 - Apr 2024</span>
-            </div>
-
-            <p class="timeline-description">
-              Desarrollo de funcionalidades backend para plataformas fintech, implementando lógica de negocio,
-              endpoints API y mejoras en el rendimiento del sistema. Participación en proyectos orientados a manejo
-              de datos sensibles y validaciones críticas.
-            </p>
-
-            <div class="timeline-highlights">
-              <span class="timeline-tag">Python</span>
-              <span class="timeline-tag">Django</span>
-              <span class="timeline-tag">APIs REST</span>
-              <span class="timeline-tag">Fintech</span>
-            </div>
+            <div class="timeline-header"><div><h3 class="timeline-title" data-i18n="experience.igd.role">Backend Developer</h3><p class="timeline-company">IGD S.A.S / SmartCredit / Biometric</p></div><span class="timeline-date" data-i18n="experience.igd.date">Nov 2023 - Abr 2024</span></div>
+            <p class="timeline-description" data-i18n="experience.igd.text">Desarrollo backend para plataformas fintech, simulación de créditos, firma electrónica, validación de identidad, endpoints API y lógica de negocio sobre datos sensibles.</p>
+            <div class="timeline-highlights"><span class="timeline-tag">Python</span><span class="timeline-tag">Django</span><span class="timeline-tag">Flask</span><span class="timeline-tag">REST APIs</span><span class="timeline-tag">Fintech</span></div>
           </div>
         </div>
-
-        <!-- SOPORTE IT -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <div class="timeline-header">
-              <div>
-                <h3 class="timeline-title">Asistente de Sistemas / IT Support</h3>
-                <p class="timeline-company">Catalonia Complejo Bávaro</p>
-              </div>
-              <span class="timeline-date">Apr 2025 - Jul 2025</span>
-            </div>
-
-            <p class="timeline-description">
-              Soporte técnico a usuarios, gestión de infraestructura y administración de redes en entorno empresarial.
-              Resolución de incidencias de hardware/software, gestión de usuarios en Active Directory y soporte a
-              sistemas críticos de operación hotelera.
-            </p>
-
-            <div class="timeline-highlights">
-              <span class="timeline-tag">Linux</span>
-              <span class="timeline-tag">Redes</span>
-              <span class="timeline-tag">Active Directory</span>
-              <span class="timeline-tag">Soporte IT</span>
-            </div>
+            <div class="timeline-header"><div><h3 class="timeline-title" data-i18n="experience.myasesor.role">Backend Engineer</h3><p class="timeline-company">MyAsesor Colombia S.A.S</p></div><span class="timeline-date" data-i18n="experience.myasesor.date">Feb 2021 - Nov 2021</span></div>
+            <p class="timeline-description" data-i18n="experience.myasesor.text">Desarrollo del sistema principal, migración de código legacy desde Java/Spring Boot hacia Python/Django, arquitectura modular basada en servicios y APIs internas.</p>
+            <div class="timeline-highlights"><span class="timeline-tag">Python</span><span class="timeline-tag">Django</span><span class="timeline-tag">PostgreSQL</span><span class="timeline-tag">Microservices</span><span class="timeline-tag">GitFlow</span></div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -588,61 +377,29 @@
   <section class="contact" id="contact">
     <div class="container">
       <div class="section-header">
-        <p class="section-label">Contacto</p>
-        <h2 class="section-title">Trabajemos juntos</h2>
+        <p class="section-label" data-i18n="contact.label">Contacto</p>
+        <h2 class="section-title" data-i18n="contact.title">Trabajemos juntos</h2>
       </div>
       <div class="contact-grid">
         <div class="contact-info">
-          <h3>Disponible para nuevos proyectos</h3>
-          <p>
-            Si necesitas construir o escalar un sistema backend crítico — ya sea un SaaS, una plataforma transaccional o
-            un sistema con lógica compleja — puedo ayudarte a diseñarlo y llevarlo a producción con confiabilidad.
-          </p>
+          <h3 data-i18n="contact.heading">Disponible para nuevos proyectos</h3>
+          <p data-i18n="contact.text">Si necesitas construir o escalar un sistema backend crítico — SaaS, fintech, firma digital, validación de identidad, logística o plataforma transaccional — puedo ayudarte a diseñarlo y llevarlo a producción.</p>
           <div class="contact-links">
             <a href="mailto:magnusmartinez@outlook.com" class="contact-link">
-              <span class="contact-link-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                  <polyline points="22,6 12,13 2,6" />
-                </svg>
-              </span>
+              <span class="contact-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg></span>
               magnusmartinez@outlook.com
             </a>
-            <a href="https://www.linkedin.com/in/elias-martinez-dev/" target="_blank" class="contact-link">
-              <span class="contact-link-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                  <rect x="2" y="9" width="4" height="12" />
-                  <circle cx="4" cy="4" r="2" />
-                </svg>
-              </span>
+            <a href="https://www.linkedin.com/in/elias-martinez-dev/" target="_blank" class="contact-link" rel="noopener">
+              <span class="contact-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg></span>
               LinkedIn
             </a>
           </div>
         </div>
         <form class="contact-form" id="contactForm">
-          <div class="form-group">
-            <label class="form-label" for="name">Nombre</label>
-            <input type="text" id="name" class="form-input" placeholder="Tu nombre" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="email">Email</label>
-            <input type="email" id="email" class="form-input" placeholder="tu@email.com" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="message">Mensaje</label>
-            <textarea id="message" class="form-textarea" placeholder="Cuéntame sobre tu proyecto..."
-              required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%;">
-            Enviar mensaje
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="22" y1="2" x2="11" y2="13" />
-              <polygon points="22 2 15 22 11 13 2 9 22 2" />
-            </svg>
-          </button>
+          <div class="form-group"><label class="form-label" for="name" data-i18n="contact.form.name">Nombre</label><input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre" data-i18n-placeholder="contact.form.namePlaceholder" required></div>
+          <div class="form-group"><label class="form-label" for="email" data-i18n="contact.form.email">Email</label><input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" data-i18n-placeholder="contact.form.emailPlaceholder" required></div>
+          <div class="form-group"><label class="form-label" for="message" data-i18n="contact.form.message">Mensaje</label><textarea id="message" name="message" class="form-textarea" placeholder="Cuéntame sobre tu proyecto..." data-i18n-placeholder="contact.form.messagePlaceholder" required></textarea></div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;"><span data-i18n="contact.form.submit">Enviar mensaje</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" /></svg></button>
         </form>
       </div>
     </div>
@@ -652,16 +409,8 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-
-        <p class="footer-text">
-          © 2026 Elías Martínez — Sistemas reales: consistencia, rendimiento y escalabilidad.
-        </p>
-
-        <div class="footer-links">
-          <a href="https://www.linkedin.com/in/elias-martinez-dev/" target="_blank">LinkedIn</a>
-          <a href="mailto:magnusmartinez@outlook.com">Email</a>
-        </div>
-
+        <p class="footer-text" data-i18n="footer.text">© 2026 Elías Martínez — Sistemas reales: consistencia, rendimiento y escalabilidad.</p>
+        <div class="footer-links"><a href="https://www.linkedin.com/in/elias-martinez-dev/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:magnusmartinez@outlook.com">Email</a></div>
       </div>
     </div>
   </footer>
@@ -670,31 +419,19 @@
   <div class="modal-overlay" id="projectModal">
     <div class="modal">
       <div class="modal-header">
-        <div>
-          <h2 class="modal-title" id="modalTitle">Título del Proyecto</h2>
-          <p class="modal-subtitle" id="modalSubtitle">Tipo de proyecto</p>
-        </div>
-        <button class="modal-close" onclick="closeProjectModal()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
-        </button>
+        <div><h2 class="modal-title" id="modalTitle">Título del Proyecto</h2><p class="modal-subtitle" id="modalSubtitle">Tipo de proyecto</p></div>
+        <button class="modal-close" onclick="closeProjectModal()" aria-label="Close modal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg></button>
       </div>
-      <div class="modal-body" id="modalBody">
-        <!-- Content dynamically inserted -->
-      </div>
+      <div class="modal-body" id="modalBody"></div>
     </div>
   </div>
 
   <script src="constants.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
   <script>
-    (function () {
+    if (window.emailjs && typeof PUBLIC_API_KEY !== 'undefined') {
       emailjs.init(PUBLIC_API_KEY);
-    })();
+    }
   </script>
   <script src="index.js"></script>
 </body>
